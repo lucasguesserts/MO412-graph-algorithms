@@ -1,0 +1,21 @@
+source node number,target node number,edge type
+7,13,forward
+7,5,forward
+13,12,cross
+12,6,back
+5,7,back
+5,9,forward
+5,1,cross
+5,15,forward
+6,1,forward
+11,12,forward
+11,2,forward
+1,3,forward
+9,4,forward
+3,11,forward
+2,3,back
+10,3,cross
+4,8,forward
+8,2,cross
+14,2,cross
+15,8,cross
