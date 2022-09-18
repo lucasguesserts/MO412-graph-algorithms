@@ -7,6 +7,16 @@
 - [website of the discipline](https://www.ic.unicamp.br/~meidanis/courses/mo412/2022s2/)
 - [book network science by Albert-László Barabási](http://networksciencebook.com/)
 
+## venv
+
+```sh
+python -m venv venv
+. .venv/bin/activate
+pip install -r requirements.txt
+pip freeze > requirements.txt
+deactivate
+```
+
 ## Author
 
 Lucas Guesser Targino da Silva
