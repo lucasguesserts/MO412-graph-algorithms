@@ -53,6 +53,7 @@ psutil==5.9.1
 ptyprocess==0.7.0
 pure-eval==0.2.2
 pycparser==2.21
+pydot==1.4.2
 Pygments==2.13.0
 pyparsing==3.0.9
 pyrsistent==0.18.1
@@ -61,6 +62,7 @@ pytz==2022.2.1
 pyzmq==23.2.1
 qtconsole==5.3.2
 QtPy==2.2.0
+scipy==1.9.1
 Send2Trash==1.8.0
 six==1.16.0
 soupsieve==2.3.2.post1
