@@ -18,7 +18,7 @@
 
 \begin{document}
 
-\section{Problem Description}
+\section*{Problem Description}
 
 Consider Cayley Trees $T(k, P)$ as defined in
 \href{http://networksciencebook.com/chapter/3#homework3}{Problem 4 of Barabasi's book, Chapter 3 on Random Networks}, for $k >= 3$:
@@ -70,8 +70,6 @@ the first $P$ is the distance from one leaf vertex to the root of the tree. The 
 
 \section{Formula for the number of vertices}
 
-\subsection{Number of vertices per level}
-
 \begin{enumerate}
     \item The level 0 has 1 vertex: the root of the tree.
     \item The level $l$ ($l \geq 1$) has $N_L(l, k)$ vertices:
@@ -82,6 +80,28 @@ the first $P$ is the distance from one leaf vertex to the root of the tree. The 
         \begin{equation}
             N(k,P) = \Sum{i = 0}{P}{N_L(l,k)} = 1 + k \cdot \dfrac{{\left(k - 1\right)}^{P} - 1}{k - 2}
         \end{equation}
+\end{enumerate}
+
+\section{Plot of the number of nodes and the diameter}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{../result/diameter_as_a_function_of_the_number_of_nodes.png}
+    \caption{$d_{\max}(k, P)$ as a function of $ln{\left(N(k,P)\right)}$}
+    \label{figure:plot}
+\end{figure}
+
+Notice that there is a clear exponential tendency in the Figure \ref{figure:plot}. One can describe the relation with the function:
+
+\begin{equation}
+    d_{\max}(N) = \alpha \cdot \ln(N) + \beta
+\end{equation}
+
+For the data used to produce the Figure \ref{figure:plot} ($k=6$, $P$ from 1 to 10), using curve fit, one finds the values:
+
+\begin{enumerate}
+    \item $\alpha = 1.2392486252985329 \pm 0.0015234289193245037$
+    \item $\beta = -0.4615606209981668 \pm 0.015760537821112773$
 \end{enumerate}
 
 
