@@ -1,3 +1,4 @@
+import os
 import matplotlib.pyplot as plt
 import networkx as nx
 from networkx.drawing.nx_pydot import graphviz_layout
@@ -37,7 +38,12 @@ class CayleyTree:
         # https://stackoverflow.com/questions/57512155/how-to-draw-a-tree-more-beautifully-in-networkx
         pos = graphviz_layout(self.graph, prog="twopi")
         nx.draw(self.graph, pos)
-        plt.savefig("foo.png")
+        output_dir = "./output"
+        os.makedirs(output_dir, exist_ok=True)
+        plt.savefig(os.path.join(
+            output_dir,
+            f"cayley_tree_k_{self.degree}_P_{self.depth}.png",
+        ))
     
     @property
     def diameter(self) -> int:
@@ -46,6 +52,16 @@ class CayleyTree:
     @property
     def number_of_nodes(self) -> int:
         return self.graph.number_of_nodes()
+
+    def summarize(self):
+        print(f"Cayley Tree:")
+        print(f"\tTree parameters:")
+        print(f"\t\tdegree (k) = {self.degree}")
+        print(f"\t\tdepth (P) = {self.depth}")
+        print(f"\tTree properties:")
+        print(f"\t\tdiameter - d_max(k,P) = {self.diameter}")
+        print(f"\t\tnumber of nodes - N(k,P) = {self.number_of_nodes}")
+        print("") 
 
 class CayleyTreeProps:
 
@@ -62,6 +78,16 @@ class CayleyTreeProps:
     def number_of_nodes(self) -> int:
         return int(1 + self.degree * ((self.degree - 1)**self.depth - 1) / (self.degree - 2))
 
+    def summarize(self):
+        print(f"Cayley Tree - closed formulas:")
+        print(f"\tTree parameters:")
+        print(f"\t\tdegree (k) = {self.degree}")
+        print(f"\t\tdepth (P) = {self.depth}")
+        print(f"\tTree properties:")
+        print(f"\t\tdiameter - d_max(k,P) = {self.diameter}")
+        print(f"\t\tnumber of nodes - N(k,P) = {self.number_of_nodes}")
+        print("")
+
 if __name__ == "__main__":
     degree = 4
     depth = 3
@@ -74,7 +100,5 @@ if __name__ == "__main__":
         depth = depth
     )
     tree.draw()
-    print(f"diameter = {tree.diameter}")
-    print(f"number of nodes = {tree.number_of_nodes}")
-    print(f"diameter = {props.diameter}")
-    print(f"number of nodes = {props.number_of_nodes}")
+    tree.summarize()
+    props.summarize()
