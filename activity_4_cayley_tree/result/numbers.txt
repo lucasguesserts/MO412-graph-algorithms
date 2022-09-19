@@ -1,0 +1,26 @@
+Cayley Tree:
+	Tree parameters:
+		degree (k) = 3
+		depth (P) = 5
+	Tree properties:
+		diameter - d_max(k,P) = 10
+		number of nodes - N(k,P) = 94
+
+Cayley Tree - closed formulas:
+	Tree parameters:
+		degree (k) = 3
+		depth (P) = 5
+	Tree properties:
+		diameter - d_max(k,P) = 10
+		number of nodes - N(k,P) = 94
+
+Curve fit:
+	d_{max} = f(N) = alpha * ln(N) + beta
+	alpha = 1.2392486252985329 +- 0.0015234289193245037
+	beta = -0.4615606209981668 +- 0.015760537821112773
+
+Plot:
+	depth_values = [ 1  2  3  4  5  6  7  8  9 10]
+	number_of_nodes_array = [       7       37      187      937     4687    23437   117187   585937
+  2929687 14648437]
+	diameter_array = [ 2  4  6  8 10 12 14 16 18 20]

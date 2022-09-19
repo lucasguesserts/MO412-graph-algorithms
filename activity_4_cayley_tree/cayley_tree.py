@@ -1,6 +1,7 @@
 import os
 import json
 import numpy as np
+import scipy.optimize
 import matplotlib.pyplot as plt
 import networkx as nx
 from networkx.drawing.nx_pydot import graphviz_layout
@@ -109,21 +110,43 @@ class NDplot:
         self.max_depth = 10
         return
 
+    def _summarize_curve_fit(self, x_name, x, y_name, y):
+        function = lambda x, alpha, beta: alpha * np.log(x) + beta
+        popt, pcov = scipy.optimize.curve_fit(function, x, y)
+        perr = np.sqrt(np.diag(pcov))
+        alpha = popt[0]
+        alpha_error = perr[0]
+        beta = popt[1]
+        beta_error = perr[1]
+        print(f"Curve fit:")
+        print(f"\t{y_name} = f({x_name}) = alpha * ln({x_name}) + beta")
+        print(f"\talpha = {alpha} +- {alpha_error}")
+        print(f"\tbeta = {beta} +- {beta_error}")
+        print("")
+        return lambda x: alpha * np.log(x) + beta
 
     def plot(self) -> None:
         depth_values = np.arange(1, self.max_depth + 1, 1)
-        x = np.log(np.array(list(map(
+        number_of_nodes_array = np.array(list(map(
             lambda d: CayleyTreeProps(degree = self.degree, depth = d).number_of_nodes,
             depth_values
-        ))))
-        y = np.array(list(map(
+        )))
+        diameter_array = np.array(list(map(
             lambda d: CayleyTreeProps(degree = self.degree, depth = d).diameter,
             depth_values
         )))
-        plt.plot(x, y, color="k", linestyle="-", marker=".")
+        curve = self._summarize_curve_fit("N", number_of_nodes_array, "d_{max}", diameter_array)
+        print(f"Plot:")
+        print(f"\tdepth_values = {depth_values}")
+        print(f"\tnumber_of_nodes_array = {number_of_nodes_array}")
+        print(f"\tdiameter_array = {diameter_array}")
+        plt.plot(np.log(number_of_nodes_array), diameter_array, color="k", linestyle="-", marker=".", label="values")
+        # plt.plot(np.log(number_of_nodes_array), curve(number_of_nodes_array), color="gray", linestyle="--", label="curve fit")
         plt.title(r"$d_{\max}(k, P)$ and $ln(N(k, P))$, for $P$ ranging from $1$ to $10$")
         plt.xlabel(r"$ln(N(k, P))$")
         plt.ylabel(r"$d_{\max}(k, P)$")
+        plt.grid(True)
+        plt.legend(loc="best")
         plt.savefig(os.path.join(
             output_dir,
             f"diameter_as_a_function_of_the_number_of_nodes.png",
