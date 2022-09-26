@@ -17,6 +17,24 @@ pip freeze > requirements.txt
 deactivate
 ```
 
+## Build reports with latex
+
+### Requirements
+
+```sh
+# Fedora
+sudo dnf install -y texlive-scheme-full
+sudo dnf install -y latexmk
+```
+
+### Compile
+
+In the directory where all files are located (usually the `report` dir), execute:
+
+```sh
+latexmk
+```
+
 ## Author
 
 Lucas Guesser Targino da Silva
