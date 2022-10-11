@@ -1,4 +1,5 @@
 import itertools
+import os
 import pickle
 
 import matplotlib.pyplot as plt
@@ -61,9 +62,12 @@ class BarabasiAlbertGraph:
             self.checkpoint[number_of_nodes] = self.graph.copy()
         return
 
-    def save_checkpoints(self) -> None:
+    def save_checkpoints(self, output_dir: str) -> None:
         for number_of_nodes, graph in self.checkpoint.items():
-            file_name: str = f"{number_of_nodes}.pkl"
+            file_name: str = os.path.join(
+                output_dir,
+                f"{number_of_nodes}.pkl"
+            )
             print(f"Saving checkpoint with {number_of_nodes} nodes in '{file_name}'")
             with open(file_name, "wb") as file:
                 pickle.dump(graph, file)
@@ -88,8 +92,25 @@ class Expected:
     ) -> int:
         return initial_number_of_nodes + number_of_generations
 
+    @staticmethod
+    def all_assertions(model: BarabasiAlbertGraph):
+        expected_number_of_nodes: int = Expected.number_of_nodes(
+            initial_number_of_nodes, number_of_generations
+        )
+        expected_number_of_edges: int = Expected.number_of_edges(
+            len(list(itertools.combinations(range(initial_number_of_nodes), 2))),
+            initial_number_of_nodes,
+            number_of_generations,
+        )
+        assert model.graph.number_of_edges() == expected_number_of_edges
+        assert model.graph.number_of_nodes() == expected_number_of_nodes
+
+
 
 if __name__ == "__main__":
+    output_dir = os.path.join(os.path.abspath(os.getcwd()), "output")
+    os.makedirs(output_dir, exist_ok=True)
+
     initial_number_of_nodes: int = 4
     number_of_generations: int = 10_000
     checkpoint_list: list[int] = [100, 1_000, 10_000]
@@ -99,15 +120,10 @@ if __name__ == "__main__":
         number_of_generations,
         checkpoint_list,
     )
-    model.save_checkpoints()
 
-    expected_number_of_nodes: int = Expected.number_of_nodes(
-        initial_number_of_nodes, number_of_generations
-    )
-    expected_number_of_edges: int = Expected.number_of_edges(
-        len(list(itertools.combinations(range(initial_number_of_nodes), 2))),
-        initial_number_of_nodes,
-        number_of_generations,
-    )
-    assert model.graph.number_of_edges() == expected_number_of_edges
-    assert model.graph.number_of_nodes() == expected_number_of_nodes
+    model.save_checkpoints(output_dir)
+
+    Expected.all_assertions(model)
+
+
+
