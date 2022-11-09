@@ -12,36 +12,6 @@ class WikiDataException(Exception):
         return {"message": Exception.__str__(self), "data": self.data}.__str__()
 
 
-class DatetimeConverter:
-    @staticmethod
-    def convert(text) -> datetime:
-        regex = r"^(\d{2}):(\d{2}), (\d{1,2}) ([A-Z][a-z]+) (\d{4})$"
-        x = re.match(regex, text)
-        x = x.groups()
-        return datetime(
-            year=int(x[4]),
-            month=DatetimeConverter._month_to_int[x[3]],
-            day=int(x[2]),
-            hour=int(x[0]),
-            minute=int(x[1]),
-        )
-
-    _month_to_int: dict[str, int] = {
-        "January": 1,
-        "February": 2,
-        "March": 3,
-        "April": 4,
-        "May": 5,
-        "June": 6,
-        "July": 7,
-        "August": 8,
-        "September": 9,
-        "October": 10,
-        "November": 11,
-        "December": 12,
-    }
-
-
 class WikiData:
     def __init__(self, data: dict[str, str]) -> None:
         self.source: str = str(data["SRC"])
@@ -59,7 +29,7 @@ class WikiData:
             "target": self.target,
             "vote": self.vote,
             "accepted": self.accepted,
-            "date": self.date.isoformat(),
+            "year": self.year,
             "comment": self.comment,
         }
 
