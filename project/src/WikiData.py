@@ -1,5 +1,6 @@
-from datetime import datetime
-import re
+from typing import Callable
+
+import networkx as nx
 
 
 class WikiDataException(Exception):
@@ -67,6 +68,14 @@ class WikiDataReader:
         self._read()
         return
 
+    def __str__(self):
+        s = ""
+        for d in self.data:
+            s += d.__str__() + "\n"
+        for d in self.exceptions:
+            s += d.__str__() + "\n"
+        return s
+
     def _read(self) -> None:
         wiki_data_list = []
         with open(self._file_name) as file:
@@ -91,3 +100,27 @@ class WikiDataReader:
     def _data_list_to_dict(self, data: list[str]) -> dict[str, str]:
         data = dict(map(lambda s: s.split(":", 1), data))
         return data
+
+
+class WikiDataGraphMaker:
+    def __init__(self, wiki_data_list: list[WikiData]) -> None:
+        self.wiki_data_list: list[WikiData] = wiki_data_list
+        self._filter_list()
+        return
+
+    def make(self) -> nx.MultiDiGraph():
+        graph = nx.MultiDiGraph()
+        for wd in self.wiki_data_list:
+            graph.add_edge(wd.source, wd.target, weight=wd.vote)
+        return graph
+
+    _filter_criterias: list[Callable[[list[WikiData]], list[WikiData]]] = [
+        lambda wiki_data_list: list(
+            filter(lambda wiki_data: wiki_data.vote != 0, wiki_data_list)
+        )
+    ]
+
+    def _filter_list(self) -> list[WikiData]:
+        for filter_criteria in self._filter_criterias:
+            self.wiki_data_list = filter_criteria(self.wiki_data_list)
+        return self.wiki_data_list
