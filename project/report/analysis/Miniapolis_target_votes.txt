@@ -1,0 +1,108 @@
+('Hahc21', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('John F. Lewis', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('KillerChihuahua', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('The Utahraptor', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Mlpearc', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Stfg', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Mark Arsten', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('LlamaAl', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Chrishonduras', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Status', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('TBrandley', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('BDD', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('BuickCenturyDriver', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Diannaa', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Stephen', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Someguy1221', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Kurtis', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Pharaoh of the Wizards', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Swarm', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Boing! said Zebedee', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Brookie', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Trevj', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Tryptofish', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('78.26', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Gobonobo', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Jebus989', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('It Is Me Here', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Secret', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('RP459', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Inka 888', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Garamond Lethe', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Jusdafax', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Marcus Qwertyus', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Epbr123', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Deb', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Ks0stm', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Pratyya Ghosh', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Dainomite', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Elen of the Roads', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Rogerd', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Kraxler', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Dennis Brown', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Stalwart111', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Yrtneg', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Nyttend', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Torchiest', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('INeverCry', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Wizardman', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Filelakeshoe', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('RegentsPark', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Arctic Kangaroo', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('IComputerSaysNo', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('A7x', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Ktr101', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Pol430', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Cncplayer', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Carrite', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Mkdw', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Mediran', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Inks.LWC', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Moonriddengirl', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Peridon', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Joe Decker', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Anthony Bradbury', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Mr. Stradivarius', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('MONGO', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Torreslfchero', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Chick Bowen', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('The ed17', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Dirtlawyer1', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Cmckain14', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Foxj', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Soap', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Hawkeye7', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('PaleAqua', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Tyrol5', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Trusilver', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Mscuthbert', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Kudpung', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Kim Dent-Brown', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('99of9', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Ched', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Lectonar', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('RayAYang', 'Miniapolis') {0: {'weight': 1, 'year': 2013}}
+('Go Phightins!', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('DGG', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('AutomaticStrikeout', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('Shadowjams', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('WilyD', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('Kiefer.Wolfowitz', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('TParis', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('GiantSnowman', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('Intothatdarkness', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('Keepscases', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('Kierzek', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('Spencer', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('Pichpich', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('Espresso Addict', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('Axl', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('Wikipedian Penguin', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('Colonel Warden', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('Salvio  giuliano', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('Hobit', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('DeltaQuad', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('Mark91', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('Hullaballoo Wolfowitz', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('Glrx', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
+('Bwilkins', 'Miniapolis') {0: {'weight': -1, 'year': 2013}}
