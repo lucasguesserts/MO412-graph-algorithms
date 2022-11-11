@@ -17,7 +17,7 @@ def load_graph(file_name: str) -> nx.Graph:
 
 
 def compute_degree_distribution(graph: nx.MultiDiGraph):
-    degree_of_vertices = list(map(lambda v: graph.in_degree(v), graph.nodes))
+    degree_of_vertices = list(map(lambda v: graph.out_degree(v), graph.nodes))
     count = np.bincount(degree_of_vertices)
     probabilities = count / len(degree_of_vertices)
     degrees = np.arange(0, np.max(degree_of_vertices) + 1, 1, dtype=int)

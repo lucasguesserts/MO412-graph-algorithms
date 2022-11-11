@@ -1,6 +1,7 @@
 from src.WikiData import *
 from src.NetworkAnalyzer import NetworkAnalyzer as NA
 from src.cumulative_degree_distribution import plot_degree_distribution
+from src.votes_per_year import plot_votes_per_year
 
 if __name__ == "__main__":
 
@@ -15,6 +16,12 @@ if __name__ == "__main__":
     )
     print("has cycle = ", NA.has_cycle(g))
 
+    years, votes = NA.number_of_votes_per_year(g)
+
+    plot_votes_per_year(years, votes)
+
+    # NA.export_to_gephi(g, "foo.gexf")
+
     figure_title = "cumulative out-degree distribution"
-    figure_file_name = "foo.png"
+    figure_file_name = "cummulative_out_degree_distribution.png"
     plot_degree_distribution(g, figure_title, figure_file_name)
