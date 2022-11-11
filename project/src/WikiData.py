@@ -108,16 +108,16 @@ class WikiDataGraphMaker:
         self._filter_list()
         return
 
-    def make(self) -> nx.MultiDiGraph():
+    def make(self) -> nx.MultiDiGraph:
         graph = nx.MultiDiGraph()
         for wd in self.wiki_data_list:
-            graph.add_edge(wd.source, wd.target, weight=wd.vote)
+            graph.add_edge(wd.source, wd.target, weight=wd.vote, year=wd.year)
         return graph
 
     _filter_criterias: list[Callable[[list[WikiData]], list[WikiData]]] = [
         lambda wiki_data_list: list(
             filter(lambda wiki_data: wiki_data.vote != 0, wiki_data_list)
-        )
+        ),
     ]
 
     def _filter_list(self) -> list[WikiData]:

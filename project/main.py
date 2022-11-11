@@ -13,6 +13,7 @@ if __name__ == "__main__":
         "weakely_connected_components = ",
         NA.weakely_connected_components(g)["number_of_connected_componets"],
     )
+    print("has cycle = ", NA.has_cycle(g))
 
     figure_title = "cumulative out-degree distribution"
     figure_file_name = "foo.png"
