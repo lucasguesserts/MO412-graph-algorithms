@@ -1,7 +1,5 @@
-from src.WikiData import *
-from src.NetworkAnalyzer import NetworkAnalyzer as NA
-from src.cumulative_degree_distribution import plot_degree_distribution
-from src.votes_per_year import plot_votes_per_year
+from rfa import *
+NA = NetworkAnalyzer
 
 if __name__ == "__main__":
 
