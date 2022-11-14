@@ -21,7 +21,6 @@ class NetworkAnalyzer:
     def has_cycle(dg: nx.MultiDiGraph) -> int:
         try:
             cycle = nx.find_cycle(dg)
-            print(cycle)
             return True
         except nx.NetworkXNoCycle:
             return False

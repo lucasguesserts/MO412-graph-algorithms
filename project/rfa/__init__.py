@@ -11,7 +11,6 @@ from .WikiDataGraphMaker import WikiDataGraphMaker
 from .NetworkAnalyzer import NetworkAnalyzer
 from .NetworkAnalyzer import NetworkAnalyzer
 from .GraphPerYear import GraphPerYear
-from .votes_per_year import plot_votes_per_year
-from .cumulative_degree_distribution import plot_degree_distribution
+from .CummulativeDegreeDistribution import CummulativeDegreeDistribution
 
 from . import exception
