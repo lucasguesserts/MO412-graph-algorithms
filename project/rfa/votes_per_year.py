@@ -12,4 +12,4 @@ def plot_votes_per_year(years, votes):
     ax.grid(True)
     ax.set_xlim(min(*years), max(*years))
     fig.savefig("votes_per_year.png")
-    plt.close()
+    plt.close(fig)
