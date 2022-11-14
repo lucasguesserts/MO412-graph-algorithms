@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage[a4paper]{geometry}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{lscape}
+
+\title{Activity 10 - Robustness}
+\author{Lucas Guesser Targino da Silva - RA: 203534}
+
+\begin{document}
+
+\maketitle
+
+The results are in the Table \ref{table:results}. There, $f_c$ is the relative\footnote{Relative to the number of nodes of the network.} number of nodes that have to be removed from the network for it to lose its giant component. It is calculated using the Equation \ref{eq:fc}. ``-'' values are fields which are not appliable for the particular network.
+
+For directed networks, the values $f_{c, in}, f_{c, out}, f_{c, directed}$ are provided. They are similar to $f_c$: $f_{c, in}, f_{c, out}$ use $\langle k_{in}^2 \rangle$ and $\langle k_{out}^2 \rangle$ instead of $\langle k^2 \rangle$, respectively; $f_{c, di}$ is calculated according to the Equation \ref{eq:fcdi}.
+
+In the Equation \ref{eq:fcdi}, one chose to use $\max$ because one considers the network to be disconnected when both the ``in'' and ``out'' network are disconnected. Such choice doesn't matter much because, for all networks, both $f_{c, in}, f_{c, out}$ are very close.
+
+\begin{equation}
+    \label{eq:fc}
+    f_c = 1 - \dfrac{1}{\frac{\langle k^2 \rangle}{\langle k \rangle} - 1}
+\end{equation}
+
+\begin{equation}
+    \label{eq:fcdi}
+    f_{c, di} = \max \{f_{c, in}, f_{c, out}\}
+\end{equation}
+
+\input{result.tex}
+
+\end{document}
