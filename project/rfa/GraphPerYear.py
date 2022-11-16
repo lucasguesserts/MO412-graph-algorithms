@@ -57,8 +57,10 @@ class GraphPerYear:
             vert=False,
             showfliers=outliers,
         )
-        title = degree_type.__str__().split(".")[-1].title()
-        ax.set_title(f"{title}-Degree Quartiles per Year (without outliers")
+        degree_type_str = degree_type.__str__().split(".")[-1].title()
+        ax.set_title(f"{degree_type_str}-Degree Quartiles per Year (without outliers)")
+        ax.set_xlabel(f"{degree_type_str}-Degree")
+        ax.set_ylabel("Year")
         ax.grid(True, alpha=0.4)
         return
 
