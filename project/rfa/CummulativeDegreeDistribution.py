@@ -6,27 +6,30 @@ import networkx as nx
 import numpy as np
 import scipy.optimize
 
+from .DegreeType import DegreeType
+
 plt.rcParams.update({"text.usetex": True, "font.family": "Helvetica"})
 
 
 class CummulativeDegreeDistribution:
-    def __init__(self, graph: nx.MultiDiGraph, degree_type: str = "out"):
+    def __init__(
+        self, graph: nx.MultiDiGraph, degree_type: DegreeType = DegreeType.OUT
+    ):
         self._graph = graph
-        if degree_type == "out":
-            self._title = "Out-Degree Distribution"
-            self._file_name = "out_degree_distribution"
-        elif degree_type == "in":
-            self._title = "In-Degree Distribution"
-            self._file_name = "in_degree_distribution"
-        else:
+        self._degree_type = degree_type
+        if self._degree_type not in DegreeType:
             raise ValueError(
-                f"degree_type must be one of ['out', 'in'], but '{degree_type}' was provided"
+                f"degree_type must be one of {[e.value for e in DegreeType]}, but '{degree_type}' was provided"
             )
         return
 
     @property
+    def title(self) -> str:
+        return self._degree_type.__str__().split(".")[-1].title() + "Degree Distribution"
+
+    @property
     def file_name(self) -> str:
-        return self._file_name
+        return self._degree_type.__str__().split(".")[-1].lower() + "_degree_distribution.png"
 
     def plot(self, ax: plt.Axes) -> None:
         [degrees, probabilities] = self._compute_degree_distribution()
@@ -49,7 +52,7 @@ class CummulativeDegreeDistribution:
             linestyle="--",
             label=curve_fit_as_string,
         )
-        ax.set_title(self._title)
+        ax.set_title(self.title)
         ax.set_xlabel(r"$k$")
         ax.set_ylabel(r"$p_{k}$")
         # ax.set_ylim([None, 1])
@@ -58,8 +61,13 @@ class CummulativeDegreeDistribution:
         return
 
     def _compute_degree_distribution(self):
+        graph_degree_function = (
+            self._graph.out_degree
+            if self._degree_type == DegreeType.OUT
+            else self._graph.in_degree
+        )
         degree_of_vertices = list(
-            map(lambda v: self._graph.out_degree(v), self._graph.nodes)
+            map(lambda v: graph_degree_function(v), self._graph.nodes)
         )
         count = np.bincount(degree_of_vertices)
         probabilities = count / len(degree_of_vertices)

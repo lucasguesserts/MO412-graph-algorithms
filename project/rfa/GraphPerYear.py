@@ -5,6 +5,7 @@ import networkx as nx
 import numpy as np
 import numpy.typing as npt
 
+from .DegreeType import DegreeType
 from .WikiData import WikiData
 from .WikiDataGraphMaker import WikiDataGraphMaker
 
@@ -44,10 +45,10 @@ class GraphPerYear:
         ax.grid(visible=True, axis="y", which="major")
         return
 
-    def plot_quartiles(self, ax: plt.Axes, degree_type: str = "out", outliers: bool = False) -> None:
+    def plot_quartiles(self, ax: plt.Axes, degree_type: DegreeType = DegreeType.OUT, outliers: bool = False) -> None:
         x = self._data.keys()
         y = list(map(
-            lambda g: GraphPerYear._get_graph_degree(g),
+            lambda g: GraphPerYear._get_graph_degree(g, degree_type),
             self._data.values()
         ))
         ax.boxplot(
@@ -56,23 +57,21 @@ class GraphPerYear:
             vert=False,
             showfliers=outliers,
         )
-        ax.set_title(f"{degree_type.title()}-Degree Quartiles per Year (without outliers")
+        title = degree_type.__str__().split(".")[-1].title()
+        ax.set_title(f"{title}-Degree Quartiles per Year (without outliers")
         ax.grid(True, alpha=0.4)
         return
 
     @staticmethod
-    def _get_graph_degree(graph: nx.MultiDiGraph, degree_type: str = "out") -> npt.NDArray[np.int_]:
-        if degree_type == "out":
-            degree_function = lambda g: g.out_degree()
-        elif degree_type == "in":
-            degree_function = lambda g: g.in_degree()
-        else:
-            raise ValueError(
-                f"degree_type must be one of ['out', 'in'], but '{degree_type}' was provided"
-            )
+    def _get_graph_degree(graph: nx.MultiDiGraph, degree_type: DegreeType = DegreeType.OUT) -> npt.NDArray[np.int_]:
+        graph_node_degree_function = (
+            graph.out_degree
+            if degree_type == DegreeType.OUT
+            else graph.in_degree
+        )
         degrees = np.array(list(map(
             lambda x: x[1],
-            degree_function(graph)
+            graph_node_degree_function(graph)
         )))
         return degrees
 

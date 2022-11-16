@@ -8,6 +8,7 @@ __version__ = "0.0.0"
 from .WikiData import *
 from .WikiDataReader import WikiDataReader
 from .WikiDataGraphMaker import WikiDataGraphMaker
+from .DegreeType import DegreeType
 from .NetworkAnalyzer import NetworkAnalyzer
 from .NetworkAnalyzer import NetworkAnalyzer
 from .GraphPerYear import GraphPerYear

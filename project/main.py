@@ -19,9 +19,9 @@ if __name__ == "__main__":
     ax = fig.add_subplot(111)
     gpy = GraphPerYear(reader.data)
     gpy.plot_quartiles(
-        ax,
-        degree_type="in",
-        outliers=False,
+        ax=ax,
+        degree_type=DegreeType.IN,
+        outliers=False
     )
     fig.savefig(os.path.join(output_dir, "quartiles_in.png"))
     plt.close(fig)
