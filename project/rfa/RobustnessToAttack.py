@@ -1,6 +1,8 @@
 import pickle
 
+import matplotlib.pyplot as plt
 import networkx as nx
+import numpy as np
 
 
 class RobustnessToAttack:
@@ -10,6 +12,8 @@ class RobustnessToAttack:
         self.ps = []
         self.fs = []
         self._run()
+        self.ps = np.array(self.ps)
+        self.fs = np.array(self.fs)
         return
 
     @staticmethod
@@ -22,6 +26,13 @@ class RobustnessToAttack:
         with open(file_name, "wb") as file:
             pickle.dump(self, file)
         return
+
+    # def plot(self, ax: plt.Axes, tail_cut: int, mark_critical_threshold: bool) -> None:
+    #     ax.plot(self.fs[:-tail_cut], self.ps[:-tail_cut], 'k', label="attacks")
+    #     if mark_critical_threshold:
+    #         f_critical = self._find_critical_threshold()
+    #         ax.vlines(f_critical, 0, 1, color='gray', linestyles='--', label="fc = {:.2f}".format(f_critical))
+    #     return
 
     def _compute_p_inf(self) -> float:
         components = nx.weakly_connected_components(self.g)
@@ -42,3 +53,10 @@ class RobustnessToAttack:
             self.fs.append(self._compute_f())
             print(self.g.number_of_nodes())
         return
+
+    # def _find_critical_threshold(self):
+    #     for i in range(len(self.ps)):
+    #         if self.ps[i] < 0.01:
+    #             break
+    #     f_critical = self.fs[i]
+    #     return f_critical

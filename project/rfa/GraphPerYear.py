@@ -1,4 +1,4 @@
-from typing import Callable
+from typing import Callable, Union
 
 import matplotlib.pyplot as plt
 import networkx as nx
@@ -6,15 +6,20 @@ import numpy as np
 import numpy.typing as npt
 
 from .DegreeType import DegreeType
+from .RobustnessToAttack import RobustnessToAttack
 from .WikiData import WikiData
 from .WikiDataGraphMaker import WikiDataGraphMaker
 
 
 class GraphPerYear:
-    def __init__(self, data: list[WikiData]):
+    def __init__(self, data: list[WikiData], build_robustness: bool = False):
         self._raw_data = data.copy()
         self._year_list = self._make_year_list()
         self._data = self._make_data()
+        if build_robustness:
+            self.robustness = {
+                year: RobustnessToAttack(self._data[year]) for year in self._year_list
+            }
 
     def _make_year_list(self) -> list[int]:
         return list(
@@ -45,12 +50,19 @@ class GraphPerYear:
         ax.grid(visible=True, axis="y", which="major")
         return
 
-    def plot_quartiles(self, ax: plt.Axes, degree_type: DegreeType = DegreeType.OUT, outliers: bool = False) -> None:
+    def plot_quartiles(
+        self,
+        ax: plt.Axes,
+        degree_type: DegreeType = DegreeType.OUT,
+        outliers: bool = False,
+    ) -> None:
         x = self._data.keys()
-        y = list(map(
-            lambda g: GraphPerYear._get_graph_degree(g, degree_type),
-            self._data.values()
-        ))
+        y = list(
+            map(
+                lambda g: GraphPerYear._get_graph_degree(g, degree_type),
+                self._data.values(),
+            )
+        )
         ax.boxplot(
             y,
             labels=x,
@@ -65,16 +77,13 @@ class GraphPerYear:
         return
 
     @staticmethod
-    def _get_graph_degree(graph: nx.MultiDiGraph, degree_type: DegreeType = DegreeType.OUT) -> npt.NDArray[np.int_]:
+    def _get_graph_degree(
+        graph: nx.MultiDiGraph, degree_type: DegreeType = DegreeType.OUT
+    ) -> npt.NDArray[np.int_]:
         graph_node_degree_function = (
-            graph.out_degree
-            if degree_type == DegreeType.OUT
-            else graph.in_degree
+            graph.out_degree if degree_type == DegreeType.OUT else graph.in_degree
         )
-        degrees = np.array(list(map(
-            lambda x: x[1],
-            graph_node_degree_function(graph)
-        )))
+        degrees = np.array(list(map(lambda x: x[1], graph_node_degree_function(graph))))
         return degrees
 
     @staticmethod
