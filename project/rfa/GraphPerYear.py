@@ -39,13 +39,15 @@ class GraphPerYear:
     def plot(
         self, ax: plt.Axes, f: Callable[[float], nx.MultiDiGraph], y_label: str = ""
     ) -> None:
-        x = self._data.keys()
-        y = list(map(f, self._data.values()))
+        y = np.array(list(self._data.keys()))
+        x = np.array(list(map(f, self._data.values())))
         ax.plot(x, y, color="black", marker="o")
-        ax.set_xlim([min(self._year_list), max(self._year_list)])
-        ax.set_ylabel(y_label)
-        ax.set_xlabel("year")
-        ax.set_xticks(self._year_list)
+        ax.set_xlim([0, 43_000])
+        ax.set_xlabel(y_label)
+        ax.set_ylabel("year")
+        ax.ticklabel_format(
+            axis='x',style='sci',scilimits=(0,0))
+        ax.set_yticks(self._year_list)
         ax.grid(visible=True, axis="x", which="major")
         ax.grid(visible=True, axis="y", which="major")
         return
@@ -70,9 +72,9 @@ class GraphPerYear:
             showfliers=outliers,
         )
         degree_type_str = degree_type.__str__().split(".")[-1].title()
-        ax.set_title(f"{degree_type_str}-Degree Quartiles per Year (without outliers)")
-        ax.set_xlabel(f"{degree_type_str}-Degree")
-        ax.set_ylabel("Year")
+        # ax.set_title(f"{degree_type_str}-Degree Quartiles per Year (without outliers)")
+        # ax.set_xlabel(f"{degree_type_str}-Degree")
+        # ax.set_ylabel("Year")
         ax.grid(True, alpha=0.4)
         return
 
@@ -94,6 +96,9 @@ class GraphPerYear:
             filter(lambda wd: wd.year == year, data)
         )
         graph_maker.add_filter(year_filter_criteria)
+        graph_maker.add_filter(
+            lambda data: list(filter(lambda wd: wd.vote == -1, data)),
+        )
         graph = graph_maker.make()
         return graph
 
