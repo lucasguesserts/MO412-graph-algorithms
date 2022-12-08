@@ -1,0 +1,162 @@
+\documentclass{article}
+\usepackage[a4paper]{geometry}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage[shortlabels]{enumitem}
+
+\title{Graph Algorithms - Quiz}
+
+\author{Lucas Guesser Targino da Silva - RA: 203534}
+
+\begin{document}
+
+\maketitle
+
+\section*{Answers}
+
+\begin{table}[ht!]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \# & \textbf{Question} & \textbf{Answer} & \textbf{Explanation} \\\hline\hline
+        1  & 2022-104 & B & See section \ref{2022-104} \\\hline
+        2  & 2021-028 & D & See section \ref{2021-028} \\\hline
+        3  & 2021-003 & A & See section \ref{2021-003} \\\hline
+        4  & 2022-086 & A & See section \ref{2022-086} \\\hline
+        5  & 2022-184 & E & See section \ref{2022-184} \\\hline
+        6  & 2021-021 & C & See section \ref{2021-021} \\\hline
+        7  & 2022-163 & D & See section \ref{2022-163} \\\hline
+        8  & 2021-068 & D & See section \ref{2021-068} \\\hline
+        9  & 2022-127 & A & See section \ref{2022-127} \\\hline
+        10 & 2022-182 & A & See section \ref{2022-182} \\\hline
+    \end{tabular}
+\end{table}
+
+\section{2022-104}\label{2022-104}
+
+Using the formulas provided in the question:
+
+$$
+\cos^2(x) = \dfrac{1}{4} \left( e^{2ix} + 2 + e^{-2ix} \right)
+$$
+
+Then the integral is:
+
+$$
+\displaystyle\int \dfrac{1}{4} \left( e^{2ix} + 2 + e^{-2ix} \right) dx
+=
+\dfrac{1}{4} \left( \dfrac{e^{2ix}}{2i} + 2x - \dfrac{e^{-2ix}}{2i} \right) + c
+$$
+
+\section{2021-028}\label{2021-028}
+
+In the Barabási-Albert model, the nodes do not have a fitness, which is equivalent to all nodes having the same fitness.
+
+in the book, the author states that ``When all fitnesses are equal, the Bianconi-Barabási model reduces to the Barabási-Albert model''.
+
+\section{2021-003}\label{2021-003}
+
+$$
+A = \dfrac{dV}{dr} = \dfrac{d}{dr}\left( \dfrac{4}{3} \pi r^3 \right) = 4 \pi r^2
+$$
+
+\section{2022-086}\label{2022-086}
+
+The instantaneous rate of change of pink dolphins is the derivative with time:
+
+$$
+\dfrac{dF}{dt}
+=
+\dfrac{d}{dt} \left( -10 \cdot \ln(t+1) + 3100 \cdot e^{-0.3 \cdot t}\right)
+=
+-10 \cdot \dfrac{1}{t+1} + 3100 \cdot (-0.3) \cdot e^{-0.3 \cdot t}
+$$
+
+So:
+
+$$
+\dfrac{dF}{dt}(t = 5) = -209.17771560470638 \approx -209
+$$
+
+\section{2022-184}\label{2022-184}
+
+Check out the code of the file \verb|2022_184.py|, it outputs:
+
+\begin{verbatim}
+Modularity = 0.2978395061728395
+\end{verbatim}
+
+There is no option close to that number, so the answer is ``None of the above''.
+
+\section{2021-021}\label{2021-021}
+
+Let $G$ be a graph with $n$ nodes and $k$ tree edges. Suppose that $G$ has $c$ connected components. In a DFS, each connected components is a tree $t$ with $n_t$ nodes and $k_t$ edges, with $k_t = n_t - 1$. Therefore, the number of tree edges can be computed as:
+
+$$
+e
+=
+\displaystyle\sum\limits_{t=1}^{c} k_t
+=
+\displaystyle\sum\limits_{t=1}^{c} \left( n_t - 1 \right)
+=
+\left( \displaystyle\sum\limits_{t=1}^{c} n_t \right) - c
+=
+n - c
+$$
+
+Therefore:
+$$ c = n - k $$
+which corresponds to option C.
+
+\section{2022-163}\label{2022-163}
+
+\begin{enumerate}[A.]
+    \item wrong, it is proportional to $ln(ln(N))$, see \href{http://networksciencebook.com/chapter/4#degree-exponent}{Box 4.5};
+    \item wrong, $\langle k \rangle$ is finite, see \href{http://networksciencebook.com/chapter/4#degree-exponent}{Box 4.5}
+    \item wrong, $\langle k^2 \rangle$ is finite, see \href{http://networksciencebook.com/chapter/4#degree-exponent}{Box 4.5}
+    \item Correct, tha is the equation 4.18 in \href{http://networksciencebook.com/chapter/4#hubs}{Hubs Section}
+    \item only if all previous ones are wrong
+\end{enumerate}
+
+\section{2021-068}\label{2021-068}
+
+Check out the code of the file \verb|2021_068.py|, it outputs:
+
+\begin{verbatim}
+m(g(1)) = 0.48958333333333337
+m(g(2)) = 0.4131944444444445
+\end{verbatim}
+
+The network with the smallest modularity is the 2, and it has modularity approximately equals to $0.41$, thus the answer is D.
+
+\section{2022-127}\label{2022-127}
+
+\begin{enumerate}[I.]
+    \item True;
+    \item False, Scale-free networks DO follow a power-law degree distribution;
+    \item False, the Barabási-Albert model do not remove links;
+    \item True;
+\end{enumerate}
+
+Thus the answer is A.
+
+\section{2022-182}\label{2022-182}
+
+\begin{enumerate}[I.]
+    \item True (the book says ``small-degree nodes tend to connect to other small-degree nodes'');
+    \item False, that is what is expected of a Neutral Network. The probability of connecting a node with degree $k$ to another of degree $k'$ is smaller than $\dfrac{k \cdot k'}{2 \cdot L}$;
+    \item False. Take for instance the complete graph with two nodes, it has no cycle, yet it is perfectly assortative;
+    \item False, $\mu > 0$ for assortative networks;
+\end{enumerate}
+
+Thus the answer is A (Only I).
+
+\end{document}
