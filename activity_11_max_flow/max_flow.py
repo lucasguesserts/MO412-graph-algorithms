@@ -20,7 +20,7 @@ def read_graph(nodes_file_path: str, arcs_file_path: str) -> nx.Graph:
     )
     edge_list = np.loadtxt(arcs_file_path, delimiter=",", dtype=np.int_)
     # graph
-    graph = nx.Graph()
+    graph = nx.DiGraph()
     for node_number, node_name in node_map.items():
         graph.add_node(node_number, name=node_name)
     for u, v, c in edge_list:
