@@ -1,0 +1,133 @@
+('Steel1943', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Cuchullain', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('INeverCry', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Cncmaster', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Miniapolis', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Sven Manguard', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Ramaksoud2000', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('RockMagnetist', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Carrite', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Someguy1221', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Secret', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Dennis Brown', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('MJ94', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('King of Hearts', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Go Phightins!', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Hahc21', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('TBrandley', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Mazca', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Pratyya Ghosh', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Film at 11', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Nyttend', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('SlimVirgin', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Ducknish', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Bluerasberry', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('DanielTom', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('RightCowLeftCoast', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Boing! said Zebedee', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Shadowjams', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Tolly4bolly', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('NintendoFan', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Newyorkbrad', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Camyoung54', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('MrX', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Wikiwind', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Marcus Qwertyus', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Dirtlawyer1', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Soap', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('HMSSolent', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Chris.urs-o', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Pol430', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Peridon', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Stalwart111', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Wizardman', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Danger', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('AutomaticStrikeout', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Rzuwig', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('069952497a', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('WJBscribe', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('EdJohnston', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Dainomite', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Tucoxn', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('LlamaAl', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Kurtis', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Inks.LWC', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Widr', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('In ictu oculi', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Thumperward', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Brookie', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Kierzek', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('WereSpielChequers', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Ret.Prof', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Ultraexactzz', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Kraxler', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Stillnotelf', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Orlady', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('KumiokoCleanStart', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('PhilKnight', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Ronhjones', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Ignatzmice', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('MelanieN', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Rivertorch', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Kaldari', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Scott Martin', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Pharaoh of the Wizards', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Deli nk', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Mr. Stradivarius', 'BDD') {0: {'weight': 1, 'year': 2013}}
+("Useight's Public Sock", 'BDD') {0: {'weight': 1, 'year': 2013}}
+('CaSJer', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('RP459', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Favonian', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Monterey Bay', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Minimac', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Angelo1345', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Gilderien', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Pedro', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Deb', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Technical 13', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Nick', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Amorymeltzer', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Lenticel', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Tiggerjay', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Doctree', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('SarekOfVulcan', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Sparklism', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Northamerica1000', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Hut 8.5', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('MONGO', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Adjwilley', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Snow Blizzard', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Mkdw', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Trusilver', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('RegentsPark', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Mediran', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Kudpung', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('The Transhumanist', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Bloom6132', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('SmokeyJoe', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Yintan', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Piotrus', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Erik', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('GiantSnowman', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Reaper Eternal', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Tryptofish', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Salvidrim', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Dwaipayanc', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('78.26', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Dru of Id', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Strike Eagle', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Apteva', 'BDD') {0: {'weight': 1, 'year': 2013}}
+('Malleus Fatuorum', 'BDD') {0: {'weight': -1, 'year': 2013}}
+('S Marshall', 'BDD') {0: {'weight': -1, 'year': 2013}}
+('Colonel Warden', 'BDD') {0: {'weight': -1, 'year': 2013}}
+('Jusdafax', 'BDD') {0: {'weight': -1, 'year': 2013}}
+('Hobit', 'BDD') {0: {'weight': -1, 'year': 2013}}
+('DGG', 'BDD') {0: {'weight': -1, 'year': 2013}}
+('Buggie111', 'BDD') {0: {'weight': -1, 'year': 2013}}
+('John', 'BDD') {0: {'weight': -1, 'year': 2013}}
+('Ihardlythinkso', 'BDD') {0: {'weight': -1, 'year': 2013}}
+('Intothatdarkness', 'BDD') {0: {'weight': -1, 'year': 2013}}
+('Razionale', 'BDD') {0: {'weight': -1, 'year': 2013}}
+('Kauffner', 'BDD') {0: {'weight': -1, 'year': 2013}}
+('Vodello', 'BDD') {0: {'weight': -1, 'year': 2013}}
+('Kiefer.Wolfowitz', 'BDD') {0: {'weight': -1, 'year': 2013}}
